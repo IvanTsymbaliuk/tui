@@ -1,11 +1,15 @@
 import Nav from "./components/Nav";
-import Main from "./components/Main";
+import ProductGrid from "./components/ProductGrid";
+import { ThemeProvider } from "@mui/material";
+import theme from "./styles/theme";
 
 function App() {
   return (
     <>
-      <Nav />
-      <Main />
+      <ThemeProvider theme={theme}>
+        <Nav />
+        <ProductGrid />
+      </ThemeProvider>
     </>
   );
 }
